@@ -1,0 +1,73 @@
+body,html {
+    background: rgb(29, 29, 29);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(184, 221, 160);
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-cont {
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-row: repeat(3,1fr );
+    gap: 2px;
+}
+
+.box {
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    background: rgb(238, 238, 238);
+    
+}
+
+.boxOn {
+    background: rgb(38, 75, 7);
+}
+
+.boxWin {
+    background: rgb(0, 182, 238);
+}
+
+.boxLost {
+    background: rgb(190, 66, 66);
+}
+
+.boxTime {
+    background: rgb(100, 173, 51);
+}
+
+.box:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.boxOn:hover {
+    cursor:grab;
+}
+
+.start {
+    cursor: pointer;
+    margin-top: 7px;
+    padding: 5px;
+    font-size: 1.7em;
+    font-family: monospace;
+    background: rgb(202, 248, 180);
+    border-radius: 20px;
+    border: 2px black;
+}
+
+.alerta {
+    font-size: 2em;
+    color: wheat;
+}

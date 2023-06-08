@@ -15,9 +15,9 @@ function comprobar() {
 
     if ( clicks >= 4) {
         pause = false;
-        console.log("Perdiste")
         puntos = 0;
         reiniciar()
+        botonStart.style.display = "inline-block"
         return;
     }
 
@@ -55,6 +55,7 @@ function comprobar() {
 
 
 botonStart.addEventListener('click', ()=> {
+    botonStart.style.display = "none"
     randoms()
     juego()
     setInterval(()=> {comprobar()});

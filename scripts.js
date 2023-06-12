@@ -4,7 +4,9 @@ const botonStart = document.querySelector('.start');
 const contenedor = document.querySelector('.box-cont');
 const box = contenedor.querySelectorAll('.box');
 const alerta = document.querySelector('.alerta');
+const hidden = document.querySelector('.hidden');
 
+let velocidad = 1500;
 let pause = false;
 let puntos = 0;
 let clicks = 0;
@@ -47,6 +49,10 @@ function comprobar() {
             }
         }
         clicks = 0;
+        if (velocidad >= 100) {
+            velocidad = velocidad - 100;
+        }
+        console.log(velocidad)
         puntos++;
         alerta.textContent = "Puntos: " + puntos;
         return;
@@ -61,7 +67,7 @@ botonStart.addEventListener('click', ()=> {
     setInterval(()=> {comprobar()});
     setTimeout(()=>{
         pause = true;
-    },1500)
+    },velocidad)
     return;
 })
 
@@ -86,7 +92,7 @@ function juego() {
         box[nA].classList.remove('boxTime');
         box[nB].classList.remove('boxTime');
         box[nC].classList.remove('boxTime');
-    },1500)
+    },velocidad)
 }
 
 
@@ -104,6 +110,7 @@ function reiniciar() {
     alerta.textContent = "Puntos: " + puntos;
     pause = false;
     randomNums = [];
+    velocidad = 1500;
     for (let i = 0; i < box.length; i++) {
         if (box[i].classList.contains('boxOn')) {
             box[i].classList.remove('boxOn');

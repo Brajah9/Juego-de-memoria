@@ -47,6 +47,10 @@ h1 {
     background: #1f5758;
 }
 
+.boxPause {
+    background: black;
+}
+
 .box:hover {
     cursor: pointer;
     opacity: 90%;

@@ -49,8 +49,9 @@ function comprobar() {
             }
         }
         clicks = 0;
-        if (velocidad >= 100) {
+        if (velocidad > 200) {
             velocidad = velocidad - 100;
+            console.log(velocidad)
         }
         console.log(velocidad)
         puntos++;
